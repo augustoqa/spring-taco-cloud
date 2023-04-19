@@ -1,6 +1,7 @@
 package tacos;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.constraints.Digits;
@@ -13,6 +14,13 @@ import lombok.Data;
 
 @Data
 public class TacoOrder {
+
+	private static final long serialVersionUID = 1L;
+
+	private Long id;
+
+	private Date placedAt;
+
 	@NotBlank(message="Elivery name is required")
 	private String deliveryName;
 	
